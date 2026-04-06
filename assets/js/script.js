@@ -171,22 +171,32 @@
     });
   }
 
-  // ---------- FILE UPLOAD DISPLAY ----------
-  var fileInput = document.getElementById('files');
-  var fileList = document.getElementById('fileList');
-  if (fileInput && fileList) {
-    fileInput.addEventListener('change', function () {
-      fileList.innerHTML = '';
+  // ---------- FILE UPLOAD DISPLAY (all forms) ----------
+  function setupFileUpload(inputId, listId) {
+    var input = document.getElementById(inputId);
+    var list = document.getElementById(listId);
+    if (!input || !list) return;
+
+    input.addEventListener('change', function () {
+      list.innerHTML = '';
+      var maxSize = 25 * 1024 * 1024; // 25MB
       Array.from(this.files).forEach(function (file, i) {
         var item = document.createElement('div');
         item.className = 'file-list__item';
         var name = file.name.length > 25 ? file.name.substring(0, 22) + '...' : file.name;
         var size = (file.size / 1024 / 1024).toFixed(1) + 'MB';
-        item.innerHTML = '<span>' + name + ' (' + size + ')</span><button type="button" data-index="' + i + '">&times;</button>';
-        fileList.appendChild(item);
+        if (file.size > maxSize) {
+          item.style.borderColor = '#e74c3c';
+          item.innerHTML = '<span style="color:#e74c3c">' + name + ' (' + size + ') — Too large!</span>';
+        } else {
+          item.innerHTML = '<span>' + name + ' (' + size + ')</span>';
+        }
+        list.appendChild(item);
       });
     });
   }
+  setupFileUpload('files', 'fileList');
+  setupFileUpload('files-home', 'fileListHome');
 
   // ---------- PROJECT FILTERS ----------
   var filterBtns = document.querySelectorAll('.filter-btn');
@@ -233,41 +243,45 @@
     });
   }
 
-  // ---------- PARALLAX EFFECT ON HERO ----------
-  function handleParallax() {
-    var scrollY = window.scrollY;
-    var hero = document.querySelector('.hero__content');
-    if (hero && scrollY < window.innerHeight) {
-      hero.style.transform = 'translateY(' + (scrollY * 0.3) + 'px)';
-      hero.style.opacity = 1 - (scrollY / window.innerHeight);
+  // ---------- PARALLAX EFFECT ON HERO (homepage only) ----------
+  var heroContent = document.querySelector('.hero__content');
+  if (heroContent) {
+    function handleParallax() {
+      var scrollY = window.scrollY;
+      if (scrollY < window.innerHeight) {
+        heroContent.style.transform = 'translateY(' + (scrollY * 0.3) + 'px)';
+        heroContent.style.opacity = 1 - (scrollY / window.innerHeight);
+      }
     }
+    window.addEventListener('scroll', handleParallax, { passive: true });
   }
 
-  window.addEventListener('scroll', handleParallax, { passive: true });
+  // ---------- ACTIVE NAV LINK (homepage only, skip on subpages) ----------
+  var isHomepage = !document.querySelector('.page-hero');
+  if (isHomepage) {
+    function updateActiveNav() {
+      var sections = document.querySelectorAll('section[id]');
+      var navLinks = document.querySelectorAll('.header__nav a');
+      var scrollY = window.scrollY + 200;
 
-  // ---------- ACTIVE NAV LINK ----------
-  function updateActiveNav() {
-    var sections = document.querySelectorAll('section[id]');
-    var navLinks = document.querySelectorAll('.header__nav a');
-    var scrollY = window.scrollY + 200;
+      sections.forEach(function (section) {
+        var top = section.offsetTop;
+        var height = section.offsetHeight;
+        var id = section.getAttribute('id');
 
-    sections.forEach(function (section) {
-      var top = section.offsetTop;
-      var height = section.offsetHeight;
-      var id = section.getAttribute('id');
-
-      if (scrollY >= top && scrollY < top + height) {
-        navLinks.forEach(function (link) {
-          link.style.color = '';
-          if (link.getAttribute('href') === '#' + id) {
-            link.style.color = '#c9a84c';
-          }
-        });
+        if (scrollY >= top && scrollY < top + height) {
+          navLinks.forEach(function (link) {
+            link.style.color = '';
+            if (link.getAttribute('href') === '#' + id) {
+              link.style.color = '#c9a84c';
+            }
+          });
       }
     });
   }
 
-  window.addEventListener('scroll', updateActiveNav, { passive: true });
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+  }
 
   // ---------- INIT ----------
   document.addEventListener('DOMContentLoaded', function () {

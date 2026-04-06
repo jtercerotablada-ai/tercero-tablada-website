@@ -1662,7 +1662,7 @@ img, svg {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 1.25rem;
+    padding: 0 1rem;
   }
 
   .about__stats {
@@ -1682,5 +1682,52 @@ img, svg {
   .hero__cta .btn {
     width: 100%;
     max-width: 280px;
+  }
+
+  .header__inner {
+    padding: 0 1rem;
+  }
+
+  .header__logo-img {
+    height: 28px;
+  }
+
+  .page-hero {
+    padding: 6rem 0 2rem;
+  }
+
+  .page-hero__title {
+    font-size: 1.75rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .contact__form-wrap {
+    padding: 1.25rem;
+  }
+
+  .projects-filter {
+    gap: 0.35rem;
+  }
+
+  .filter-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.625rem;
+  }
+
+  .footer__bottom p {
+    font-size: 0.5625rem;
+    letter-spacing: 0.05em;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .marquee__track span {
+    font-size: 0.8125rem;
   }
 }
