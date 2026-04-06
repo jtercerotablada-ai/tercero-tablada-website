@@ -255,8 +255,8 @@ img, svg {
 .hamburger span {
   display: block;
   width: 24px;
-  height: 1.5px;
-  background: var(--color-text);
+  height: 2px;
+  background: #ffffff;
   transition: all 0.4s var(--ease-out);
   transform-origin: center;
 }
