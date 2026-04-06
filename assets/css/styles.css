@@ -157,7 +157,7 @@ img, svg {
 .footer__logo-img {
   height: 48px;
   width: auto;
-  margin-bottom: 0.5rem;
+  margin: 0 auto 0.5rem;
 }
 
 .logo-text {
