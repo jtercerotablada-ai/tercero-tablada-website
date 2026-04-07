@@ -1617,7 +1617,7 @@ img, svg {
     display: none;
   }
 
-  /* Mobile header: EN/ES left, logo center, hamburger right */
+  /* Mobile header: EN/ES left, logo icon center, hamburger right */
   .header__inner {
     position: relative;
   }
@@ -1626,6 +1626,12 @@ img, svg {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .header__logo-img {
+    content: url('../../assets/img/logo-icon.svg');
+    height: 36px;
+    width: 36px;
   }
 
   .header__actions {
