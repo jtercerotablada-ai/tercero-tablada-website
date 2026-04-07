@@ -1610,10 +1610,37 @@ img, svg {
 
   .hamburger {
     display: flex;
+    order: 3;
   }
 
   .about__image::after {
     display: none;
+  }
+
+  /* Mobile header: EN/ES left, logo center, hamburger right */
+  .header__inner {
+    position: relative;
+  }
+
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header__actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .lang-toggle {
+    order: 1;
+  }
+
+  .hamburger {
+    order: 2;
   }
 
   .hero__title-line {
