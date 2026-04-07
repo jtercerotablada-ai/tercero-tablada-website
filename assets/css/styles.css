@@ -31,6 +31,11 @@
 html {
   scroll-behavior: smooth;
   font-size: 15px;
+  overflow-x: hidden;
+}
+
+html, body {
+  max-width: 100%;
 }
 
 body {
@@ -1605,6 +1610,10 @@ img, svg {
 
   .hamburger {
     display: flex;
+  }
+
+  .about__image::after {
+    display: none;
   }
 
   .hero__title-line {
