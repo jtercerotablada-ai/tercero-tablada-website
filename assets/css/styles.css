@@ -1630,8 +1630,8 @@ img, svg {
 
   .header__logo-img {
     content: url('../../assets/img/logo-icon.svg');
-    height: 36px;
-    width: 36px;
+    height: 44px;
+    width: 44px;
   }
 
   .header__actions {
