@@ -19,6 +19,10 @@
 </head>
 <body>
 
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
   <!-- HEADER -->
   <header class="header header--solid" id="header">
     <div class="header__inner">
@@ -74,99 +78,135 @@
 
       <div class="projects__grid projects__grid--full">
 
-        <a href="#" class="project-card" data-category="residential" data-aos="fade-up">
+        <a href="#" class="project-card" data-category="residential" data-aos="fade-up" data-tilt>
           <div class="project-card__img"><img src="assets/img/projects/project-01.jpg" alt="Residential Tower" loading="lazy"></div>
+          <span class="project-card__number">01 / 12</span>
+          <div class="project-card__arrow"><i class="fa-solid fa-arrow-up-long"></i></div>
           <div class="project-card__info">
+            <span class="project-card__category" data-en="Residential" data-es="Residencial">Residential</span>
             <h3 data-en="Residential Tower" data-es="Torre Residencial">Residential Tower</h3>
-            <span data-en="Post-Tensioned Concrete &middot; Residential" data-es="Concreto Postensado &middot; Residencial">Post-Tensioned Concrete &middot; Residential</span>
+            <span data-en="Post-Tensioned Concrete" data-es="Concreto Postensado">Post-Tensioned Concrete</span>
           </div>
         </a>
 
-        <a href="#" class="project-card" data-category="commercial" data-aos="fade-up" data-aos-delay="100">
+        <a href="#" class="project-card" data-category="commercial" data-aos="fade-up" data-aos-delay="100" data-tilt>
           <div class="project-card__img"><img src="assets/img/projects/project-02.jpg" alt="Commercial Complex" loading="lazy"></div>
+          <span class="project-card__number">02 / 12</span>
+          <div class="project-card__arrow"><i class="fa-solid fa-arrow-up-long"></i></div>
           <div class="project-card__info">
+            <span class="project-card__category" data-en="Commercial" data-es="Comercial">Commercial</span>
             <h3 data-en="Commercial Complex" data-es="Complejo Comercial">Commercial Complex</h3>
-            <span data-en="Steel Structure &middot; Commercial" data-es="Estructura de Acero &middot; Comercial">Steel Structure &middot; Commercial</span>
+            <span data-en="Steel Structure" data-es="Estructura de Acero">Steel Structure</span>
           </div>
         </a>
 
-        <a href="#" class="project-card" data-category="industrial" data-aos="fade-up" data-aos-delay="200">
+        <a href="#" class="project-card" data-category="industrial" data-aos="fade-up" data-aos-delay="200" data-tilt>
           <div class="project-card__img"><img src="assets/img/projects/project-03.jpg" alt="Industrial Warehouse" loading="lazy"></div>
+          <span class="project-card__number">03 / 12</span>
+          <div class="project-card__arrow"><i class="fa-solid fa-arrow-up-long"></i></div>
           <div class="project-card__info">
+            <span class="project-card__category" data-en="Industrial" data-es="Industrial">Industrial</span>
             <h3 data-en="Industrial Warehouse" data-es="Nave Industrial">Industrial Warehouse</h3>
-            <span data-en="Steel &amp; Concrete &middot; Industrial" data-es="Acero y Concreto &middot; Industrial">Steel &amp; Concrete &middot; Industrial</span>
+            <span data-en="Steel &amp; Concrete" data-es="Acero y Concreto">Steel &amp; Concrete</span>
           </div>
         </a>
 
-        <a href="#" class="project-card" data-category="residential" data-aos="fade-up">
+        <a href="#" class="project-card" data-category="residential" data-aos="fade-up" data-tilt>
           <div class="project-card__img"><img src="assets/img/projects/project-04.jpg" alt="Luxury Residence" loading="lazy"></div>
+          <span class="project-card__number">04 / 12</span>
+          <div class="project-card__arrow"><i class="fa-solid fa-arrow-up-long"></i></div>
           <div class="project-card__info">
+            <span class="project-card__category" data-en="Luxury" data-es="Lujo">Luxury</span>
             <h3 data-en="Luxury Residence" data-es="Residencia de Lujo">Luxury Residence</h3>
-            <span data-en="Wood Framing &middot; Residential" data-es="Estructura de Madera &middot; Residencial">Wood Framing &middot; Residential</span>
+            <span data-en="Wood Framing" data-es="Estructura de Madera">Wood Framing</span>
           </div>
         </a>
 
-        <a href="#" class="project-card" data-category="residential" data-aos="fade-up" data-aos-delay="100">
+        <a href="#" class="project-card" data-category="residential" data-aos="fade-up" data-aos-delay="100" data-tilt>
           <div class="project-card__img"><img src="assets/img/projects/project-05.jpg" alt="Multi-Family Housing" loading="lazy"></div>
+          <span class="project-card__number">05 / 12</span>
+          <div class="project-card__arrow"><i class="fa-solid fa-arrow-up-long"></i></div>
           <div class="project-card__info">
+            <span class="project-card__category" data-en="Multi-Family" data-es="Multifamiliar">Multi-Family</span>
             <h3 data-en="Multi-Family Housing" data-es="Vivienda Multifamiliar">Multi-Family Housing</h3>
-            <span data-en="Reinforced Concrete &middot; Residential" data-es="Concreto Reforzado &middot; Residencial">Reinforced Concrete &middot; Residential</span>
+            <span data-en="Reinforced Concrete" data-es="Concreto Reforzado">Reinforced Concrete</span>
           </div>
         </a>
 
-        <a href="#" class="project-card" data-category="public" data-aos="fade-up" data-aos-delay="200">
+        <a href="#" class="project-card" data-category="public" data-aos="fade-up" data-aos-delay="200" data-tilt>
           <div class="project-card__img"><img src="assets/img/projects/project-06.jpg" alt="Public Infrastructure" loading="lazy"></div>
+          <span class="project-card__number">06 / 12</span>
+          <div class="project-card__arrow"><i class="fa-solid fa-arrow-up-long"></i></div>
           <div class="project-card__info">
+            <span class="project-card__category" data-en="Public Works" data-es="Obras Publicas">Public Works</span>
             <h3 data-en="Public Infrastructure" data-es="Infraestructura Publica">Public Infrastructure</h3>
-            <span data-en="Masonry &amp; Concrete &middot; Public Works" data-es="Mamposteria y Concreto &middot; Obras Publicas">Masonry &amp; Concrete &middot; Public Works</span>
+            <span data-en="Masonry &amp; Concrete" data-es="Mamposteria y Concreto">Masonry &amp; Concrete</span>
           </div>
         </a>
 
-        <a href="#" class="project-card" data-category="commercial" data-aos="fade-up">
+        <a href="#" class="project-card" data-category="commercial" data-aos="fade-up" data-tilt>
           <div class="project-card__img"><img src="assets/img/projects/project-07.jpg" alt="Parking Structure" loading="lazy"></div>
+          <span class="project-card__number">07 / 12</span>
+          <div class="project-card__arrow"><i class="fa-solid fa-arrow-up-long"></i></div>
           <div class="project-card__info">
+            <span class="project-card__category" data-en="Parking" data-es="Estacionamiento">Parking</span>
             <h3 data-en="Parking Structure" data-es="Estacionamiento">Parking Structure</h3>
-            <span data-en="Post-Tension Slabs &middot; Commercial" data-es="Losas Postensadas &middot; Comercial">Post-Tension Slabs &middot; Commercial</span>
+            <span data-en="Post-Tension Slabs" data-es="Losas Postensadas">Post-Tension Slabs</span>
           </div>
         </a>
 
-        <a href="#" class="project-card" data-category="commercial" data-aos="fade-up" data-aos-delay="100">
+        <a href="#" class="project-card" data-category="commercial" data-aos="fade-up" data-aos-delay="100" data-tilt>
           <div class="project-card__img"><img src="assets/img/projects/project-08.jpg" alt="Mixed-Use Development" loading="lazy"></div>
+          <span class="project-card__number">08 / 12</span>
+          <div class="project-card__arrow"><i class="fa-solid fa-arrow-up-long"></i></div>
           <div class="project-card__info">
+            <span class="project-card__category" data-en="Mixed-Use" data-es="Uso Mixto">Mixed-Use</span>
             <h3 data-en="Mixed-Use Development" data-es="Desarrollo de Uso Mixto">Mixed-Use Development</h3>
-            <span data-en="Hybrid System &middot; Commercial" data-es="Sistema Hibrido &middot; Comercial">Hybrid System &middot; Commercial</span>
+            <span data-en="Hybrid System" data-es="Sistema Hibrido">Hybrid System</span>
           </div>
         </a>
 
-        <a href="#" class="project-card" data-category="residential" data-aos="fade-up" data-aos-delay="200">
-          <div class="project-card__img"><img src="assets/img/projects/project-09.jpg" alt="Oceanfront Residence" loading="lazy"></div>
+        <a href="#" class="project-card" data-category="public" data-aos="fade-up" data-aos-delay="200" data-tilt>
+          <div class="project-card__img"><img src="assets/img/projects/project-09.jpg" alt="Healthcare Facility" loading="lazy"></div>
+          <span class="project-card__number">09 / 12</span>
+          <div class="project-card__arrow"><i class="fa-solid fa-arrow-up-long"></i></div>
           <div class="project-card__info">
-            <h3 data-en="Oceanfront Residence" data-es="Residencia Frente al Mar">Oceanfront Residence</h3>
-            <span data-en="Reinforced Concrete &middot; Residential" data-es="Concreto Reforzado &middot; Residencial">Reinforced Concrete &middot; Residential</span>
+            <span class="project-card__category" data-en="Healthcare" data-es="Salud">Healthcare</span>
+            <h3 data-en="Healthcare Facility" data-es="Centro de Salud">Healthcare Facility</h3>
+            <span data-en="Seismic-Resistant Design" data-es="Diseno Sismorresistente">Seismic-Resistant Design</span>
           </div>
         </a>
 
-        <a href="#" class="project-card" data-category="residential" data-aos="fade-up">
-          <div class="project-card__img"><img src="assets/img/projects/project-10.jpg" alt="Custom Home" loading="lazy"></div>
+        <a href="#" class="project-card" data-category="commercial" data-aos="fade-up" data-tilt>
+          <div class="project-card__img"><img src="assets/img/projects/project-10.jpg" alt="Hospitality Tower" loading="lazy"></div>
+          <span class="project-card__number">10 / 12</span>
+          <div class="project-card__arrow"><i class="fa-solid fa-arrow-up-long"></i></div>
           <div class="project-card__info">
-            <h3 data-en="Custom Home" data-es="Casa Personalizada">Custom Home</h3>
-            <span data-en="Wood &amp; Steel &middot; Residential" data-es="Madera y Acero &middot; Residencial">Wood &amp; Steel &middot; Residential</span>
+            <span class="project-card__category" data-en="Hospitality" data-es="Hoteleria">Hospitality</span>
+            <h3 data-en="Hospitality Tower" data-es="Torre Hotelera">Hospitality Tower</h3>
+            <span data-en="High-Rise Concrete" data-es="Concreto de Gran Altura">High-Rise Concrete</span>
           </div>
         </a>
 
-        <a href="#" class="project-card" data-category="industrial" data-aos="fade-up" data-aos-delay="100">
+        <a href="#" class="project-card" data-category="industrial" data-aos="fade-up" data-aos-delay="100" data-tilt>
           <div class="project-card__img"><img src="assets/img/projects/project-11.jpg" alt="Distribution Center" loading="lazy"></div>
+          <span class="project-card__number">11 / 12</span>
+          <div class="project-card__arrow"><i class="fa-solid fa-arrow-up-long"></i></div>
           <div class="project-card__info">
+            <span class="project-card__category" data-en="Industrial" data-es="Industrial">Industrial</span>
             <h3 data-en="Distribution Center" data-es="Centro de Distribucion">Distribution Center</h3>
-            <span data-en="Steel Structure &middot; Industrial" data-es="Estructura de Acero &middot; Industrial">Steel Structure &middot; Industrial</span>
+            <span data-en="Steel Structure" data-es="Estructura de Acero">Steel Structure</span>
           </div>
         </a>
 
-        <a href="#" class="project-card" data-category="commercial" data-aos="fade-up" data-aos-delay="200">
+        <a href="#" class="project-card" data-category="commercial" data-aos="fade-up" data-aos-delay="200" data-tilt>
           <div class="project-card__img"><img src="assets/img/projects/project-12.jpg" alt="Office Building" loading="lazy"></div>
+          <span class="project-card__number">12 / 12</span>
+          <div class="project-card__arrow"><i class="fa-solid fa-arrow-up-long"></i></div>
           <div class="project-card__info">
+            <span class="project-card__category" data-en="Office" data-es="Oficina">Office</span>
             <h3 data-en="Office Building" data-es="Edificio de Oficinas">Office Building</h3>
-            <span data-en="Post-Tension &middot; Commercial" data-es="Postensado &middot; Comercial">Post-Tension &middot; Commercial</span>
+            <span data-en="Post-Tension" data-es="Postensado">Post-Tension</span>
           </div>
         </a>
 
