@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body class="under-dev">
 
   <!-- ========== SCROLL PROGRESS BAR ========== -->
   <div class="scroll-progress" id="scrollProgress"></div>
@@ -548,5 +548,27 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
+
+  <!-- ========== UNDER DEVELOPMENT OVERLAY ========== -->
+  <div class="under-dev-overlay" role="dialog" aria-labelledby="udTitle" aria-describedby="udDesc">
+    <div class="under-dev-card">
+      <div class="under-dev-badge">
+        <span class="dot"></span>
+        <span data-en="Under Development" data-es="En Desarrollo">Under Development</span>
+      </div>
+      <div class="under-dev-logo"><span class="t1">T</span><span class="t2">T</span></div>
+      <h1 id="udTitle" class="under-dev-title" data-en="Something <span class='accent'>great</span> is coming." data-es="Algo <span class='accent'>grande</span> esta por llegar.">Something <span class="accent">great</span> is coming.</h1>
+      <p id="udDesc" class="under-dev-desc" data-en="We&rsquo;re polishing this section. Meanwhile, explore our free engineering tools &mdash; fully built, validated, and ready to use." data-es="Estamos puliendo esta seccion. Mientras tanto, explora nuestras herramientas de ingenieria gratuitas &mdash; completas, validadas y listas para usar.">We&rsquo;re polishing this section. Meanwhile, explore our free engineering tools &mdash; fully built, validated, and ready to use.</p>
+      <div class="under-dev-actions">
+        <a href="/resources/" class="under-dev-btn under-dev-btn--primary">
+          <span data-en="Open Calculators" data-es="Abrir Calculadoras">Open Calculators</span>
+          <span>&rarr;</span>
+        </a>
+        <a href="contact.html" class="under-dev-btn under-dev-btn--outline" data-en="Contact Us" data-es="Contactenos">Contact Us</a>
+      </div>
+      <div class="under-dev-footer" data-en="Tercero Tablada &middot; Civil &amp; Structural Engineering" data-es="Tercero Tablada &middot; Ingenieria Civil y Estructural">Tercero Tablada &middot; Civil &amp; Structural Engineering</div>
+    </div>
+  </div>
+
 </body>
 </html>
