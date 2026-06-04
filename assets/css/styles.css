@@ -2790,6 +2790,15 @@ img, svg {
     transform: translateX(-50%);
   }
 
+  /* On touch the :hover state sticks after a tap; the base ".header__logo:hover { transform:
+     scale(1.03) }" would REPLACE the centering translate and shove the logo to the right.
+     Keep the centering transform in every interactive state so the logo never shifts on mobile. */
+  .header__logo:hover,
+  .header__logo:focus,
+  .header__logo:active {
+    transform: translateX(-50%);
+  }
+
   .header__logo-img {
     content: url('../../assets/img/logo-icon.svg');
     height: 44px;
